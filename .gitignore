@@ -2,4 +2,4 @@
 *.swp
 /caffe/
 /opencv/
-
+node_modules

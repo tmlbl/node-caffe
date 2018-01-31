@@ -7,7 +7,7 @@ fi
 
 # Install and build OpenCV from source
 function install_opencv {
-  git clone --branch '3.3.0' git@github.com:Itseez/opencv.git
+  git clone --branch '3.3.0' https://github.com/Itseez/opencv.git
   pushd opencv
   mkdir build && cd build
   cmake -Wno-dev \
@@ -94,7 +94,7 @@ if [ -z "$CAFFE_ROOT" ]; then
   SHA=24d2f67173db3344141dce24b1008efffbfe1c7d
   if [[ ! -d caffe ]]; then
     echo Downloading caffe
-    git clone git@github.com:BVLC/caffe.git
+    git clone https://github.com/BVLC/caffe.git
     git -C caffe checkout $SHA
     pushd caffe
     git am ../patch/0001-Fix-veclib-path-for-OSX-sierra.patch

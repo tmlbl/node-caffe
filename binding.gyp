@@ -35,6 +35,7 @@
         '<!(if [ "<(has_gpu)" != false ] && [ -d /usr/local/cuda/lib64 ]; then echo "-Wl,-rpath,/usr/local/cuda/lib64"; fi)',
       ],
       'cflags_cc': [
+	'-frtti',
         '-std=c++11',
         '-fexceptions',
         '-Wno-ignored-qualifiers',
